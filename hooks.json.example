@@ -1,0 +1,45 @@
+[
+  {
+    "id": "webhook",
+    "execute-command": "{AB_PATH_TO_ROOT}/webHookRouter.sh",
+    "command-working-directory": "{AB_PATH_TO_ROOT}",
+    "pass-arguments-to-command": [
+      {
+        "source": "payload",
+        "name": "project.name"
+      },
+      {
+        "source": "payload",
+        "name": "ref"
+      },
+      {
+        "source": "payload",
+        "name": "project.namespace"
+      }
+    ],
+    "trigger-rule": {
+      "and": [
+        {
+          "match": {
+            "type": "value",
+            "value": "{PASSWORD}",
+            "parameter": {
+              "source": "payload",
+              "name": "password"
+            }
+          }
+        },
+        {
+          "match": {
+            "type": "value",
+            "value": "refs/heads/dev",
+            "parameter": {
+              "source": "payload",
+              "name": "ref"
+            }
+          }
+        }
+      ]
+    }
+  }
+]
