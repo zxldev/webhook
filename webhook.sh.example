@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+{path}/webhook/webhook -hooks {path}/webhook/hooks.json -verbose -port 9200 -hotreload
