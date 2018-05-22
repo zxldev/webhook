@@ -32,7 +32,7 @@
         {
           "match": {
             "type": "value",
-            "value": "refs/heads/dev",
+            "value": "refs/heads/master",
             "parameter": {
               "source": "payload",
               "name": "ref"
