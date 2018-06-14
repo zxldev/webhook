@@ -1,3 +1,4 @@
 hooks.json
 .idea
 *.log
+*.out
