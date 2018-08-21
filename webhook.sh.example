@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-{path}/webhook/webhook -hooks {path}/webhook/hooks.json -verbose -port 9200 -hotreload
+nohup {AB_PATH_TO_ROOT}/webhook -hooks {AB_PATH_TO_ROOT}/hooks.json -verbose -port 9200 -hotreload > webhook.log &
