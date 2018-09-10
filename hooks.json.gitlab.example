@@ -1,7 +1,7 @@
 [
   {
     "id": "webhook",
-    "execute-command": "{AB_PATH_TO_ROOT}/webHookRouter.sh",
+    "execute-command": "./webHookRouter.sh",
     "command-working-directory": "{AB_PATH_TO_ROOT}",
     "pass-arguments-to-command": [
       {
